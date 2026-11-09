@@ -1,5 +1,7 @@
 # LessTube
 
+Star if you like it! <3
+
 HackerTube adapted to YouTube links in public LessWrong posts and comments. Includes the original-style responsive interface, privacy-enhanced player, semantic search, topic browsing, filters, playlists, personalized discovery, likes, watch later, history, keyboard navigation, and downloadable attributed data.
 
 ## Run
