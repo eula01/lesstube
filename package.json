@@ -1,0 +1,22 @@
+{
+  "name": "lesstube",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "ingest": "python3 scripts/ingest.py",
+    "index": "python3 scripts/build_index.py"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "^3.8.1"
+  },
+  "overrides": {
+    "sharp": "^0.35.5"
+  }
+}

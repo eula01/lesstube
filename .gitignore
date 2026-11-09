@@ -1,0 +1,17 @@
+.vercel/
+node_modules/
+data/crawl/
+data/metadata/
+data/mentions.json
+data/scan.json
+__pycache__/
+.env*
+
+data/archive-v2/
+data/embedding-cache/
+data/mentions-v2.json
+data/scan-v2.json
+data/index.json
+data/embeddings.json
+data/contexts.json
+artifacts/

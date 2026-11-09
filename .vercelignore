@@ -1,0 +1,15 @@
+data/crawl/
+data/metadata/
+data/mentions.json
+scripts/
+tests/
+README.md
+
+data/archive-v2/
+data/embedding-cache/
+data/mentions-v2.json
+data/scan-v2.json
+data/index.json
+data/embeddings.json
+data/contexts.json
+artifacts/

@@ -1,0 +1,214 @@
+[
+  {
+    "id": "ai",
+    "name": "AI & Machine Learning",
+    "count": 1873,
+    "categories": [
+      {
+        "id": "alignment",
+        "name": "AI Alignment",
+        "description": "alignment, superintelligence, existential risk, ai safety, yudkowsky, bostrom, mesa.optimizer, corrigibility, instrumental convergence, miri, robert miles",
+        "count": 1219
+      },
+      {
+        "id": "ml",
+        "name": "Machine Learning",
+        "description": "machine learning, neural network, deep learning, backpropagation, gradient descent, transformer, llm, language model, karpathy, gpt, chatgpt",
+        "count": 637
+      },
+      {
+        "id": "agents",
+        "name": "Agents & Decision Theory",
+        "description": "decision theory, newcomb, prisoner, agent foundations, functional decision, timeless decision, causal decision, logical induction, game theory",
+        "count": 153
+      }
+    ]
+  },
+  {
+    "id": "rationality",
+    "name": "Rationality & Thinking",
+    "count": 1991,
+    "categories": [
+      {
+        "id": "bias",
+        "name": "Cognitive Biases",
+        "description": "cognitive bias, kahneman, tversky, confirmation bias, thinking fast, heuristics, motivated reasoning, overconfidence, alief",
+        "count": 59
+      },
+      {
+        "id": "bayes",
+        "name": "Bayesian Reasoning",
+        "description": "bayes, probability, statistics, statistical, forecast, prediction, calibration, base rate, updating, uncertainty",
+        "count": 383
+      },
+      {
+        "id": "epistemology",
+        "name": "Epistemology",
+        "description": "epistemology, rationality, rationalist, truth, belief, evidence, epistemic, critical thinking, scout mindset, lesswrong",
+        "count": 1546
+      },
+      {
+        "id": "practice",
+        "name": "Applied Rationality",
+        "description": "cfar, applied rationality, double crux, goal factoring, internal double crux, noticing, focusing, gtd",
+        "count": 106
+      }
+    ]
+  },
+  {
+    "id": "mind",
+    "name": "Mind & Human Behavior",
+    "count": 1118,
+    "categories": [
+      {
+        "id": "psychology",
+        "name": "Psychology",
+        "description": "psychology, psychological, cognition, behavioral, behavioural, mental model, perception, attention",
+        "count": 365
+      },
+      {
+        "id": "neuro",
+        "name": "Neuroscience",
+        "description": "neuroscience, neuron, brain, dopamine, cortex, sapolsky, neurobiology, neural circuit",
+        "count": 448
+      },
+      {
+        "id": "consciousness",
+        "name": "Consciousness",
+        "description": "consciousness, qualia, sentience, sentient, chalmers, hard problem, integrated information",
+        "count": 255
+      },
+      {
+        "id": "meditation",
+        "name": "Meditation & Wellbeing",
+        "description": "meditation, mindfulness, jhana, buddhis, mental health, depression, therapy, therapeutic, trauma, wellbeing",
+        "count": 191
+      }
+    ]
+  },
+  {
+    "id": "science",
+    "name": "Science & Mathematics",
+    "count": 1267,
+    "categories": [
+      {
+        "id": "physics",
+        "name": "Physics",
+        "description": "physics, quantum, feynman, relativity, thermodynamics, entropy, spacetime, particle, cosmology",
+        "count": 370
+      },
+      {
+        "id": "math",
+        "name": "Mathematics",
+        "description": "mathematics, mathematical, 3blue1brown, linear algebra, calculus, geometry, infinity, godel, gödel, proof, number theory",
+        "count": 267
+      },
+      {
+        "id": "biology",
+        "name": "Biology & Evolution",
+        "description": "biology, evolution, darwin, genetic, dna, natural selection, evolutionary, molecular",
+        "count": 300
+      },
+      {
+        "id": "methods",
+        "name": "Scientific Method",
+        "description": "scientific method, replication, causal inference, experiment, science, research methods",
+        "count": 432
+      }
+    ]
+  },
+  {
+    "id": "philosophy",
+    "name": "Philosophy & Ethics",
+    "count": 1365,
+    "categories": [
+      {
+        "id": "ethics",
+        "name": "Ethics",
+        "description": "ethics, ethical, morality, moral, utilitarian, consequentialis, effective altruism, peter singer, animal welfare",
+        "count": 376
+      },
+      {
+        "id": "philosophy",
+        "name": "Philosophy",
+        "description": "philosophy, philosophical, free will, determinism, existentialis, nietzsche, dennett, identity, meaning of life",
+        "count": 264
+      },
+      {
+        "id": "future",
+        "name": "Long-term Futures",
+        "description": "future, futurism, longterm, singularity, transhuman, cryonics, longevity, life extension, civilization, civilisation",
+        "count": 773
+      }
+    ]
+  },
+  {
+    "id": "society",
+    "name": "Society & Coordination",
+    "count": 1205,
+    "categories": [
+      {
+        "id": "economics",
+        "name": "Economics",
+        "description": "economics, economic, market, incentive, capitalism, financial, finance, growth, trade",
+        "count": 417
+      },
+      {
+        "id": "coordination",
+        "name": "Coordination & Institutions",
+        "description": "coordination, institution, governance, cooperation, cooperate, public goods, social dilemma, mechanism design",
+        "count": 158
+      },
+      {
+        "id": "history",
+        "name": "History & Culture",
+        "description": "history, historical, culture, civilization, religion, anthropology, politics, political",
+        "count": 687
+      }
+    ]
+  },
+  {
+    "id": "computing",
+    "name": "Computing & Technology",
+    "count": 1224,
+    "categories": [
+      {
+        "id": "cs",
+        "name": "Computer Science",
+        "description": "computer science, algorithm, computation, turing, complexity, computerphile, programming, software, coding",
+        "count": 474
+      },
+      {
+        "id": "technology",
+        "name": "Technology & Engineering",
+        "description": "engineering, technology, robot, space, energy, nuclear, rocket, fusion, hardware",
+        "count": 794
+      }
+    ]
+  },
+  {
+    "id": "life",
+    "name": "Life, Learning & Creativity",
+    "count": 8376,
+    "categories": [
+      {
+        "id": "learning",
+        "name": "Learning & Education",
+        "description": "learning, education, teaching, teach, lecture, explaining, explanation, understanding, school, university",
+        "count": 6495
+      },
+      {
+        "id": "productivity",
+        "name": "Productivity & Agency",
+        "description": "productivity, procrastination, habit, motivation, agency, akrasia, self.improvement, career, work",
+        "count": 911
+      },
+      {
+        "id": "art",
+        "name": "Art, Music & Humor",
+        "description": "music, song, comedy, humor, humour, funny, art, creativ, film, animation, storytelling",
+        "count": 1242
+      }
+    ]
+  }
+]
