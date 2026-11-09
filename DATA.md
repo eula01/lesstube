@@ -12,7 +12,7 @@ The importer queries LessWrong's public GraphQL API in annual windows from 2005 
 
 ## Inclusion
 
-Every discovered 11-character YouTube video ID is included, even when linked once, in a bare-link comment, or only in a post body. There is no minimum author, month, or text-length requirement. Duplicate links within one post or comment count once. The same video appearing in both a post and a comment has two source references. Standard watch, embed, shorts, live, and youtu.be URLs are recognized, including HTML-escaped and percent-encoded variants. Redirect-only URLs without a YouTube ID and deleted/inaccessible content cannot be recovered.
+Every discovered 11-character YouTube video ID is included unless listed in excluded-videos.json by the site owner, even when linked once, in a bare-link comment, or only in a post body. There is no minimum author, month, or text-length requirement. Duplicate links within one post or comment count once. The same video appearing in both a post and a comment has two source references. Standard watch, embed, shorts, live, and youtu.be URLs are recognized, including HTML-escaped and percent-encoded variants. Redirect-only URLs without a YouTube ID and deleted/inaccessible content cannot be recovered.
 
 A failed YouTube metadata lookup never excludes a video. Such records use their link label (explicitly marked "Linked as") or video ID as a fallback title. A 403/404 is recorded as a lookup failure, not a definitive claim that a video is deleted. Titles and channels use lightweight YouTube oEmbed lookups. Duration, view counts and upload dates are optional; unknown values are excluded only by filters that require them.
 

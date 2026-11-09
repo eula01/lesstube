@@ -14,6 +14,8 @@ class SourceTests(unittest.TestCase):
   rows=mentions(self.record('<p>https://youtu.be/'+VID+' https://www.youtube.com/watch?v='+VID+'</p>'),'post');self.assertEqual(len(rows),1)
  def test_escaped_and_encoded_urls(self):
   for url in ['https://www.youtube.com/watch?feature=share&amp;v='+VID,'https%3A%2F%2Fyoutu.be%2F'+VID,'https://www.youtube-nocookie.com/embed/'+VID]:self.assertIn(VID,extract('<p>'+url+'</p>'))
+ def test_owner_exclusion_survives_rebuilds(self):
+  self.assertNotIn('dQw4w9WgXcQ',candidates([{'vid':'dQw4w9WgXcQ'}]))
  def test_single_author_single_month_is_eligible(self):
   record=mentions(self.record('<p>https://youtu.be/'+VID+'</p>'),'post')[0];self.assertEqual(list(candidates([record])),[VID])
  def test_distinct_source_types_are_preserved(self):

@@ -2,13 +2,13 @@
   {
     "id": "ai",
     "name": "AI & Machine Learning",
-    "count": 1873,
+    "count": 1872,
     "categories": [
       {
         "id": "alignment",
         "name": "AI Alignment",
         "description": "alignment, superintelligence, existential risk, ai safety, yudkowsky, bostrom, mesa.optimizer, corrigibility, instrumental convergence, miri, robert miles",
-        "count": 1219
+        "count": 1218
       },
       {
         "id": "ml",
@@ -27,7 +27,7 @@
   {
     "id": "rationality",
     "name": "Rationality & Thinking",
-    "count": 1991,
+    "count": 1990,
     "categories": [
       {
         "id": "bias",
@@ -39,7 +39,7 @@
         "id": "bayes",
         "name": "Bayesian Reasoning",
         "description": "bayes, probability, statistics, statistical, forecast, prediction, calibration, base rate, updating, uncertainty",
-        "count": 383
+        "count": 382
       },
       {
         "id": "epistemology",
@@ -189,13 +189,13 @@
   {
     "id": "life",
     "name": "Life, Learning & Creativity",
-    "count": 8376,
+    "count": 8375,
     "categories": [
       {
         "id": "learning",
         "name": "Learning & Education",
         "description": "learning, education, teaching, teach, lecture, explaining, explanation, understanding, school, university",
-        "count": 6495
+        "count": 6494
       },
       {
         "id": "productivity",

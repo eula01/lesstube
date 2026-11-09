@@ -55,3 +55,9 @@ test('semantic vectors cover every video and retrieve the same video by meaning'
  const d=index.videos[0];const result=get('search?q=semanticquery&vector='+encodeURIComponent(JSON.stringify(vectors[d.vid])));assert.equal(result.results[0].vid,d.vid);assert.equal(result.semantic,true);
  assert.doesNotThrow(()=>get('search?q=bayes&vector=%5Bnull%5D'));
 });
+
+test('excluded video is absent from direct lookup, libraries and search',()=>{
+ assert.equal(get('video?vid=dQw4w9WgXcQ'),null);
+ assert.deepEqual(get('docs?vids=dQw4w9WgXcQ'),[]);
+ assert.ok(!get('search?q=Rick%20Astley').results.some(d=>d.vid==='dQw4w9WgXcQ'));
+});

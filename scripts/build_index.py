@@ -1,6 +1,7 @@
 """Build the reproducible LessTube index. Run after ingest.py; caches YouTube metadata."""
 import gzip,collections,concurrent.futures as cf,datetime as dt,html,json,math,pathlib,re,time,urllib.request,zipfile
 ROOT=pathlib.Path(__file__).resolve().parents[1]; DATA=ROOT/'data'; META=DATA/'metadata'; META.mkdir(exist_ok=True)
+EXCLUDED=json.loads((ROOT/'excluded-videos.json').read_text()) if (ROOT/'excluded-videos.json').exists() else {}
 TAX=[
  ('ai','AI & Machine Learning',[
  ('alignment','AI Alignment','alignment|superintelligence|existential risk|ai safety|yudkowsky|bostrom|mesa.optimizer|corrigibility|instrumental convergence|miri|robert miles'),
@@ -46,7 +47,8 @@ def load_mentions():
 
 def candidates(ms):
  groups=collections.defaultdict(list)
- for m in ms: groups[m['vid']].append(m)
+ for m in ms:
+  if m['vid'] not in EXCLUDED: groups[m['vid']].append(m)
  return dict(groups)
 
 def metadata(vid):
@@ -106,7 +108,7 @@ def main():
   cats=[{'id':cid,'name':n,'description':terms.replace('|',', '),'count':sum(any(c['id']==cid for c in d['categories']) for d in videos)} for cid,n,terms in topics]
   taxonomy.append({'id':aid,'name':name,'count':sum(any(c['area']==aid for c in d['categories']) for d in videos),'categories':[c for c in cats if c['count']]})
  scan=json.loads((DATA/'scan-v2.json').read_text()) if (DATA/'scan-v2.json').exists() else {'scanned':sum(json.loads(p.read_text()).get('scanned',0) for p in (DATA/'archive-v2').glob('*.json')),'completed':dt.datetime.now(dt.timezone.utc).isoformat()}
- stats={'videos':len(videos),'comments':sum(m['source_type']=='comment' for m in included),'post_mentions':sum(m['source_type']=='post' for m in included),'mentions':len(included),'scanned_comments':scan.get('scanned_comments',0),'scanned_posts':scan.get('scanned_posts',0),'scanned':scan['scanned'],'categories':sum(len(a['categories']) for a in taxonomy),'areas':len(taxonomy),'first_year':min(m['ym'][:4] for m in included),'last_year':max(m['ym'][:4] for m in included),'generated':scan['completed'][:10],'metadata_available':sum(v['metadata_status']=='available' for v in videos),'metadata_failed':sum(v['metadata_status']!='available' for v in videos),'inclusion':'All distinct linked video IDs; no author, month, text-length, or metadata-success threshold.'}
+ stats={'videos':len(videos),'comments':sum(m['source_type']=='comment' for m in included),'post_mentions':sum(m['source_type']=='post' for m in included),'mentions':len(included),'scanned_comments':scan.get('scanned_comments',0),'scanned_posts':scan.get('scanned_posts',0),'scanned':scan['scanned'],'categories':sum(len(a['categories']) for a in taxonomy),'areas':len(taxonomy),'first_year':min(m['ym'][:4] for m in included),'last_year':max(m['ym'][:4] for m in included),'generated':scan['completed'][:10],'metadata_available':sum(v['metadata_status']=='available' for v in videos),'metadata_failed':sum(v['metadata_status']!='available' for v in videos),'inclusion':'All distinct linked video IDs except explicit owner exclusions; no author, month, text-length, or metadata-success threshold.'}
  index={'videos':videos,'comments':included,'taxonomy':taxonomy,'stats':stats}
  (DATA/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')))
  (DATA/'index.json.gz').write_bytes(gzip.compress((DATA/'index.json').read_bytes(),mtime=0))
